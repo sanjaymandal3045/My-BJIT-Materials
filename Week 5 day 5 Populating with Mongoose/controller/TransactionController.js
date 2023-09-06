@@ -9,18 +9,18 @@ class TransactionProduct {
   async getAllTransaction(req, res) {
     try {
       let transactionResult = await transactionModel
-        .find({})
+        .find()
         .populate("user", "-access")
         .populate("products.id", "-stock");
         let totalvalueList = [];
-        // console.log(transactionResult.User._id);
+        console.log(transactionResult.user);
       if (transactionResult.length > 0) {
         let totalValue = 0;
 
         for (const transaction of transactionResult) {
           for (const product of transaction.products) {
             const foundProduct = await productModel.findById(product.id);
-            console.log(product.id);
+            // console.log(product._id);
             if (foundProduct) {
               totalValue = totalValue + foundProduct.price * product.quantity;
             }

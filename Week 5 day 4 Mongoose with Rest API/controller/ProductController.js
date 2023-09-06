@@ -8,7 +8,7 @@ class Product {
   async getAll(req, res) {
     try {
       // const products = await ProductModel.getAll();
-      const users = await UserModel.find();
+      const users = await UserModel.find({},{_id:0,age:0});
       if (users.length > 0) {
         return res
           .status(200)
@@ -25,9 +25,9 @@ class Product {
   async getOneById(req, res) {
     try {
       const { id } = req.query;
-      // console.log(".....", id);
+      console.log(".....", id);
       const users = await UserModel.findById({ _id: id });
-      // console.log(users);
+      console.log(users);
       if (users) {
         console.log("in", users);
         return res

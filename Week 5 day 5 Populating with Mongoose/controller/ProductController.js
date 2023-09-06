@@ -1,9 +1,11 @@
 const { validationResult } = require("express-validator");
+const mongoose = require("mongoose");
+const transactionModel = require("../model/transaction");
 const ProductModel = require("../model/Product");
 const { success, failure } = require("../util/common");
 const UserModel = require("../model/user");
-const transactionModel = require("../model/transaction");
-const mongoose = require("mongoose");
+
+
 
 class Product {
   //-------------------------Create---------------------------
