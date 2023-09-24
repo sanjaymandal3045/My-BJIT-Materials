@@ -1,0 +1,37 @@
+.container-main {
+    background-color: #efefef;
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 30px;
+    padding: 20px;
+}
+
+.banner {
+    background-image: url('https://miro.medium.com/v2/resize:fit:1200/1*6Jp3vJWe7VFlFHZ9WhSJng.jpeg'); /* Replace with your banner image URL */
+    background-size: cover;
+    background-position: center;
+    height: 300px; /* Adjust the height as needed */
+    color: #fff; /* Text color on the banner */
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px; /* Adjust font size as needed */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add a text shadow for better visibility */
+  }
+  
+  .banner-content {
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background for text */
+    padding: 20px; /* Adjust the padding as needed */
+    border-radius: 10px;
+    transition: background-color 0.3s ease; /* Add a transition for smooth background color change */
+  }
+  
+  /* Add hover effect for the banner content */
+  .banner:hover .banner-content {
+    background-color: rgba(0, 0, 0, 0.7); /* Darker background on hover */
+    /* You can also add other styles or transitions as desired */
+  }
+  
